@@ -4,8 +4,8 @@
 .mydiv {
   /* display: flex; */
   /* justify-content: space-around; */
-  /* margin: 10px 7%; */
-  box-shadow: 1px 1px 5px grey;
+  margin: 10px 7%;
+  /* box-shadow: 1px 1px 5px grey; */
   /* padding: 10px; */
 }
 .gallery {

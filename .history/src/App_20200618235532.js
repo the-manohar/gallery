@@ -22,7 +22,7 @@ function App() {
           <h1 className="display-3">Welcome to MLeo Gallery</h1>
         </Jumbotron>
       </div>
-      <div className="d-flex p-3 mx-auto mydiv col-sm-12 col-md-10 col-xs-3 ">
+      <div className="mydiv col-sm-4 col-md-10 col-xs-4 ">
         <InputGroup>
           <Input
             placeholder="Search any image"
@@ -34,22 +34,6 @@ function App() {
           Search
         </Button>
       </div>
-      {result.length > 0 ? (
-        <div className="col-sm-12">
-          {result.map((item) => {
-            return (
-              <img
-                className=" img-thumbnail"
-                key={item.id}
-                src={item.urls.small}
-                alt={item.urls.small}
-              />
-            );
-          })}
-        </div>
-      ) : (
-        <Spinner style={{ width: "3rem", height: "3rem" }} />
-      )}
     </div>
   );
 }

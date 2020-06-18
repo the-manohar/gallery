@@ -16,13 +16,11 @@ function App() {
       });
   };
   return (
-    <div className="container App">
-      <div className="col-md-12 col-sm-10 col-xs-12">
-        <Jumbotron>
-          <h1 className="display-3">Welcome to MLeo Gallery</h1>
-        </Jumbotron>
-      </div>
-      <div className="d-flex p-3 mx-auto mydiv col-sm-12 col-md-10 col-xs-3 ">
+    <div className="App col-sm-12">
+      <Jumbotron>
+        <h1 className="display-3">Welcome to MLeo Gallery</h1>
+      </Jumbotron>
+      <div className="mydiv col-sm-12 col-md-10">
         <InputGroup>
           <Input
             placeholder="Search any image"
@@ -34,8 +32,9 @@ function App() {
           Search
         </Button>
       </div>
+
       {result.length > 0 ? (
-        <div className="col-sm-12">
+        <div className="col-sm-12 gallery">
           {result.map((item) => {
             return (
               <img

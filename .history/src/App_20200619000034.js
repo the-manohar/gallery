@@ -34,22 +34,23 @@ function App() {
           Search
         </Button>
       </div>
-      {result.length > 0 ? (
-        <div className="col-sm-12">
-          {result.map((item) => {
-            return (
-              <img
-                className=" img-thumbnail"
-                key={item.id}
-                src={item.urls.small}
-                alt={item.urls.small}
-              />
-            );
-          })}
-        </div>
-      ) : (
-        <Spinner style={{ width: "3rem", height: "3rem" }} />
-      )}
+      {
+        result.length > 0 ? (
+          <div className="col-sm-12 col-md-8">
+            {result.map((item) => {
+              return (
+                <img
+                  className=" img-thumbnail"
+                  key={item.id}
+                  src={item.urls.small}
+                  alt={item.urls.small}
+                />
+              );
+            })}
+          </div>
+        ) : null
+        // <Spinner style={{ width: "3rem", height: "3rem" }} />
+      }
     </div>
   );
 }

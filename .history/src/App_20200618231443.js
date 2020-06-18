@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Button, InputGroup, Input, Jumbotron, Spinner } from "reactstrap";
+import {
+  Button,
+  InputGroup,
+  InputGroupText,
+  InputGroupAddon,
+  Input,
+  Jumbotron,
+  Spinner,
+} from "reactstrap";
 
 import "./App.css";
 
@@ -16,14 +24,16 @@ function App() {
       });
   };
   return (
-    <div className="container App">
-      <div className="col-md-12 col-sm-10 col-xs-12">
-        <Jumbotron>
-          <h1 className="display-3">Welcome to MLeo Gallery</h1>
-        </Jumbotron>
-      </div>
-      <div className="d-flex p-3 mx-auto mydiv col-sm-12 col-md-10 col-xs-3 ">
+    <div className="App">
+      <Jumbotron>
+        <h1 className="display-3">Welcome to MLeo Gallery</h1>
+      </Jumbotron>
+      <div className="mydiv">
+        {/* <span>Search</span> */}
         <InputGroup>
+          <InputGroupAddon addonType="prepend">
+            <InputGroupText>Images</InputGroupText>
+          </InputGroupAddon>
           <Input
             placeholder="Search any image"
             value={value}
@@ -34,15 +44,16 @@ function App() {
           Search
         </Button>
       </div>
+
       {result.length > 0 ? (
-        <div className="col-sm-12">
+        <div className="gallery">
           {result.map((item) => {
             return (
               <img
-                className=" img-thumbnail"
+                className="item"
                 key={item.id}
-                src={item.urls.small}
-                alt={item.urls.small}
+                src={item.urls.regular}
+                alt={item.urls.regular}
               />
             );
           })}
@@ -56,4 +67,4 @@ function App() {
 
 export default App;
 
-//
+// V38aA4zOjg1Xb1lBpNRUAK8duXvqwhDHHJbssXB_Pps
