@@ -19,7 +19,7 @@ function App() {
     <div className="container App">
       <div className="col-md-12 col-sm-10 col-xs-12">
         <Jumbotron>
-          <h1 className="display-3">Welcome to Rajan Gallery</h1>
+          <h1 className="display-3">Welcome to Rajan's Gallery</h1>
         </Jumbotron>
       </div>
       <div className="d-flex p-3 mx-auto mydiv col-sm-12 col-md-10 col-xs-3 ">
